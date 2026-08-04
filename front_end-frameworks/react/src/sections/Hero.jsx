@@ -1,6 +1,9 @@
 function Hero() {
   return (
-    <section id="hero-section" className="relative bg-slate-950 pt-24 pb-12">
+    <section
+      id="hero-section"
+      className="relative bg-slate-950 pt-24 pb-24"
+    >
       <div className="w-full max-w-6xl mx-auto px-6 flex flex-col items-center gap-8 text-center">
         {/* Badge */}
         <div className="flex items-center gap-2 px-4 py-2 text-xs text-violet-300 rounded-full border border-violet-500/20 bg-violet-500/10">
@@ -76,6 +79,8 @@ function Hero() {
             <p className="mt-2 text-sm md:text-base text-slate-300">Support</p>
           </div>
         </div>
+
+        <hr className="border-slate-300 max-w-2xl" />
       </div>
     </section>
   );
