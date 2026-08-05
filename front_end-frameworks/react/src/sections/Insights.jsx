@@ -1,3 +1,6 @@
+import InsightCard from "../components/InsightsCard";
+import insights from "../data/insights";
+
 function Insights() {
   return (
     <section id="insights-section" className="relative bg-black py-24">
@@ -21,8 +24,19 @@ function Insights() {
           </h2>
         </div>
 
-
-
+        {/* Insights grid */}
+        <div className="mt-12 w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {insights.map((insight, index) => (
+            <InsightCard
+              key={insight.title}
+              image={insight.image}
+              title={insight.title}
+              description={insight.description}
+              category={insight.category}
+              className={index === 0 ? "md:col-span-2" : ""}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
