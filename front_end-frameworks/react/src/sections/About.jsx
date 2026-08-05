@@ -2,10 +2,10 @@ import { steps } from '../data/steps';
 
 function About() {
   return (
-    <section id="about-section" className="relative bg-slate-950 py-24">
-      <div className="w-full max-w-6xl mx-auto px-6 flex flex-col items-center gap-8 text-center">
+    <section id="about-section" className="relative bg-black py-24">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-8 px-6 text-center">
         {/* Badge */}
-        <div className="flex items-center gap-2 px-4 py-2 text-xs text-violet-300 rounded-full border border-violet-500/20 bg-violet-500/10">
+        <div className="flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-2 text-xs text-violet-300">
           <span>✧</span>
           <span>What is agentic AI ?</span>
           <span>✧</span>
@@ -13,7 +13,7 @@ function About() {
 
         {/* Title */}
         <div>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none">
+          <h2 className="text-4xl leading-none font-black tracking-tight md:text-5xl">
             <span className="block text-slate-50">
               AI that does more than answer
             </span>
@@ -23,7 +23,7 @@ function About() {
 
         {/* Subtitle */}
         <div>
-          <p className="text-sm md:text-base text-left max-w-2xl text-slate-300">
+          <p className="max-w-2xl text-left text-sm text-slate-300 md:text-base">
             Agentic AI refers to artificial intelligence systems designed to
             purpose goals, makes decisions, use tools, and adapt their actions
             across multiple steps. Instead of only responding to a single promp,
@@ -32,17 +32,17 @@ function About() {
           </p>
         </div>
 
-        <div className="mt-18 w-full grid md:grid-cols-2 gap-8">
+        <div className="mt-18 grid w-full gap-8 md:grid-cols-2">
           {/* Traditional/Agentic */}
-          <div className="self-center flex flex-col rounded-3xl border border-slate-800 bg-slate-950 shadow-xl shadow-slate-950/40 p-8 gap-4 text-left">
-            <div className="text-slate-50 font-bold">Traditional AI</div>
-            <div className="text-sm md:text-base text-slate-300">
+          <div className="flex flex-col gap-4 self-center rounded-3xl border border-slate-800 bg-slate-950 p-8 text-left shadow-xl shadow-slate-950/40">
+            <div className="font-bold text-slate-50">Traditional AI</div>
+            <div className="text-sm text-slate-500 md:text-base">
               Respond to direct instructions, generates content, answers
               questions, or analyzes information within a limited interaction.
             </div>
             <hr className="border-slate-800" />
-            <div className="text-violet-300 font-bold">Agentic AI</div>
-            <div className="text-sm md:text-base text-slate-300">
+            <div className="font-bold text-violet-300">Agentic AI</div>
+            <div className="text-sm text-slate-500 md:text-base">
               Understands a goal, chooses actions, uses external tools, followq
               a plan and adjusts its bihavior based on feedback
             </div>
@@ -52,9 +52,9 @@ function About() {
           <div className="flex flex-col text-left">
             {steps.map((step) => (
               <div key={step.id} className="flex gap-6">
-                <div className="flex flex-col items-center">   
+                <div className="flex flex-col items-center">
                   {/* Round */}
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-violet-500 text-slate-50 font-bold shadow-lg shadow-violet-500/40">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-violet-500 font-bold text-slate-50 shadow-lg shadow-violet-500/40">
                     {step.id}
                   </div>
 
@@ -66,9 +66,13 @@ function About() {
 
                 {/* Text */}
                 <div className={step.id !== steps.length ? 'pb-8' : ''}>
-                  <h3 className="text-xl font-bold text-slate-50">{step.title}</h3>
+                  <h3 className="text-xl font-bold text-slate-50">
+                    {step.title}
+                  </h3>
 
-                  <p className="mt-2 text-xs md:text-sm text-slate-300">{step.description}</p>
+                  <p className="mt-2 text-xs text-slate-300 md:text-sm">
+                    {step.description}
+                  </p>
                 </div>
               </div>
             ))}

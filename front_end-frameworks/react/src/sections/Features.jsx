@@ -1,49 +1,39 @@
-import { features } from '../data/features';
+import features from '../data/features';
+import FeatureCard from '../components/FeatureCard';
 
 function Features() {
   return (
-    <section id="features-section" className="relative bg-slate-950 py-24">
-      <div className="w-full max-w-6xl mx-auto px-6 flex flex-col items-center gap-8 text-center">
+    <section id="features-section" className="relative bg-black py-24">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-8 px-6 text-center">
         {/* Badge */}
-        <div className="flex items-center gap-2 px-4 py-2 text-xs text-violet-300 rounded-full border border-violet-500/20 bg-violet-500/10">
-          <span>✧</span>
+        <div className="flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-2 text-xs text-violet-300">
+          <span>✦</span>
           <span>Features</span>
-          <span>✧</span>
+          <span>✦</span>
         </div>
 
         {/* Title */}
         <div>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none">
+          <h2 className="text-4xl leading-none font-black tracking-tight md:text-5xl">
             <span className="block text-slate-50">
-              Everithing You Need to Build
+              Everything you need to build
             </span>
             <span className="block text-violet-300">
-              With powerful AI agents
+              with powerful AI agents
             </span>
           </h2>
         </div>
 
-        {/* Features*/}
-        <div className="w-full grid md:grid-cols-2 lg:grid-cols-3  gap-8 text-left mt-18">
-          {features.map((feature) => {
-            const Icon = feature.icon;
-
-            return (
-              <div
-                key={feature.title}
-                className="flex flex-col gap-4 p-8 rounded-3xl border border-slate-800 bg-slate-950 shadow-xl shadow-slate-950/40"
-              >
-                <Icon
-                  size={40}
-                  className="text-slate-50 bg-violet-500 rounded-xl p-2 shadow-lg shadow-violet-500/40"
-                />
-
-                <h3 className="font-semibold text-slate-50">{feature.title}</h3>
-
-                <p className="text-sm md:text-base text-slate-600">{feature.description}</p>
-              </div>
-            );
-          })}
+        {/* Features */}
+        <div className="mt-12 grid w-full gap-8 text-left md:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature) => (
+            <FeatureCard
+              key={feature.title}
+              icon={feature.icon}
+              title={feature.title}
+              description={feature.description}
+            />
+          ))}
         </div>
       </div>
     </section>
