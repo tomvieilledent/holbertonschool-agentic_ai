@@ -7,13 +7,13 @@ function Hero() {
       {/* Background effects */}
       <div className="pointer-events-none absolute inset-0">
         {/* Radial violet glow */}
-        <div className="absolute top-0 left-1/2 h-[40rem] w-[40rem] -translate-x-1/2 rounded-full bg-violet-500/20 blur-3xl" />
+        <div className="absolute top-0 left-1/2 h-160 w-160 -translate-x-1/2 rounded-full bg-violet-500/20 blur-3xl" />
         {/* Radial blue glow */}
-        <div className="absolute top-40 right-1/4 h-[30rem] w-[30rem] rounded-full bg-blue-500/10 blur-3xl" />
+        <div className="absolute top-40 right-1/4 h-120 w-120 rounded-full bg-blue-500/10 blur-3xl" />
         {/* Grid overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.12)_1px,transparent_1px)] bg-[size:72px_72px] opacity-30" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.12)_1px,transparent_1px)] bg-size[72px_72px] opacity-30" />
         {/* Depth vignette */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-950" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-slate-950" />
       </div>
 
       <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center gap-8 px-6 text-center">

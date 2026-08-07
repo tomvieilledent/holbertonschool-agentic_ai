@@ -1,11 +1,14 @@
-function InsightsCard({ category, title, description, image, className }) {
+function InsightCard({ category, title, description, image, index }) {
+  // The first card spans two columns to stand out from the others.
+  const layoutClass = index === 0 ? "md:col-span-2" : "";
+
   return (
     <article
-      className={`relative flex min-h-80 flex-col justify-end overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 bg-cover bg-center shadow-xl shadow-slate-950/40 ${className}`}
+      className={`relative flex min-h-80 flex-col justify-end overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 bg-cover bg-center shadow-xl shadow-slate-950/40 ${layoutClass}`}
       style={{ backgroundImage: `url(${image})` }}
     >
       {/* Overlay for readable contrast */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/60 to-transparent" />
 
       <div className="relative flex flex-col gap-2 p-8 text-left">
         {/* Category badge */}
@@ -23,4 +26,4 @@ function InsightsCard({ category, title, description, image, className }) {
   );
 }
 
-export default InsightsCard;
+export default InsightCard;
