@@ -1,27 +1,22 @@
-import features from '../data/features';
-import FeatureCard from '../components/FeatureCard';
+import features from "../../data/features";
+import FeatureCard from "../cards/FeatureCard";
+import SectionBadge from "../ui/SectionBadge";
+import SectionTitle from "../ui/SectionTitle";
 
 function Features() {
   return (
     <section id="features-section" className="relative bg-black py-24">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-8 px-6 text-center">
         {/* Badge */}
-        <div className="flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-2 text-xs text-violet-300">
-          <span>✦</span>
-          <span>Features</span>
-          <span>✦</span>
-        </div>
+        <SectionBadge className="text-xs">Features</SectionBadge>
 
         {/* Title */}
         <div>
-          <h2 className="text-4xl leading-none font-black tracking-tight md:text-5xl">
-            <span className="block text-slate-50">
-              Everything you need to build
-            </span>
-            <span className="block text-violet-300">
-              with powerful AI agents
-            </span>
-          </h2>
+          <SectionTitle
+            className="text-4xl md:text-5xl"
+            top="Everything you need to build"
+            bottom="with powerful AI agents"
+          />
         </div>
 
         {/* Features */}

@@ -1,0 +1,13 @@
+function SectionBadge({ children, symbol = "✦", className = "" }) {
+  return (
+    <div
+      className={`flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-2 text-violet-300 ${className}`}
+    >
+      <span>{symbol}</span>
+      <span>{children}</span>
+      <span>{symbol}</span>
+    </div>
+  );
+}
+
+export default SectionBadge;

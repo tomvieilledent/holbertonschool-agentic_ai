@@ -1,24 +1,23 @@
-import { steps } from '../data/steps';
+import { steps } from "../../data/steps";
+import SectionBadge from "../ui/SectionBadge";
+import SectionTitle from "../ui/SectionTitle";
 
 function About() {
   return (
     <section id="about-section" className="relative bg-black py-24">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-8 px-6 text-center">
         {/* Badge */}
-        <div className="flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-2 text-xs text-violet-300">
-          <span>✧</span>
-          <span>What is agentic AI ?</span>
-          <span>✧</span>
-        </div>
+        <SectionBadge symbol="✧" className="text-xs">
+          What is agentic AI ?
+        </SectionBadge>
 
         {/* Title */}
         <div>
-          <h2 className="text-4xl leading-none font-black tracking-tight md:text-5xl">
-            <span className="block text-slate-50">
-              AI that does more than answer
-            </span>
-            <span className="block text-violet-300">It acts with purpose</span>
-          </h2>
+          <SectionTitle
+            className="text-4xl md:text-5xl"
+            top="AI that does more than answer"
+            bottom="It acts with purpose"
+          />
         </div>
 
         {/* Subtitle */}
@@ -65,7 +64,7 @@ function About() {
                 </div>
 
                 {/* Text */}
-                <div className={step.id !== steps.length ? 'pb-8' : ''}>
+                <div className={step.id !== steps.length ? "pb-8" : ""}>
                   <h3 className="text-xl font-bold text-slate-50">
                     {step.title}
                   </h3>

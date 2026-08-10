@@ -1,5 +1,5 @@
 function InsightCard({ category, title, description, image, index }) {
-  // The first card spans two columns to stand out from the others.
+  /* The first card spans two columns to stand out from the others. */
   const layoutClass = index === 0 ? "md:col-span-2" : "";
 
   return (
@@ -20,7 +20,9 @@ function InsightCard({ category, title, description, image, index }) {
         <h3 className="text-lg font-bold text-slate-50">{title}</h3>
 
         {/* Description */}
-        <p className="max-w-xs text-sm text-slate-500 md:text-base">{description}</p>
+        <p className="max-w-xs text-sm text-slate-500 md:text-base">
+          {description}
+        </p>
       </div>
     </article>
   );

@@ -1,4 +1,6 @@
-
+import { Camera, Music2, X, Play } from "lucide-react";
+import Brand from "../ui/Brand";
+import SocialLink from "../ui/SocialLink";
 
 const socialLinks = [
   { icon: Camera, label: "Instagram", href: "https://www.instagram.com" },
@@ -45,12 +47,7 @@ function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <a href="#hero-section" className="flex items-center gap-2">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-violet-500 text-slate-50 shadow-lg shadow-violet-500/40">
-                <BrainCircuit size={16} />
-              </div>
-              <span className="text-sm font-bold text-slate-50">Agentic AI</span>
-            </a>
+            <Brand />
 
             <p className="max-w-xs text-sm text-slate-500">
               Explore the future of development with Agentic AI.
@@ -58,17 +55,9 @@ function Footer() {
 
             {/* Social links */}
             <ul className="flex gap-3">
-              {socialLinks.map(({ icon: Icon, label, href }) => (
+              {socialLinks.map(({ icon, label, href }) => (
                 <li key={label}>
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={label}
-                    className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-800 text-slate-400 transition-colors hover:border-violet-500 hover:text-violet-300"
-                  >
-                    <Icon size={16} />
-                  </a>
+                  <SocialLink href={href} label={label} icon={icon} />
                 </li>
               ))}
             </ul>

@@ -1,0 +1,30 @@
+const variants = {
+  primary:
+    "bg-violet-500 text-slate-50 shadow-lg shadow-violet-500/40 hover:bg-violet-600",
+  secondary:
+    "border border-slate-800 bg-slate-950 text-slate-50 hover:bg-slate-900",
+};
+
+function Button({
+  href,
+  children,
+  variant = "primary",
+  external = false,
+  className = "",
+}) {
+  const externalProps = external
+    ? { target: "_blank", rel: "noopener noreferrer" }
+    : {};
+
+  return (
+    <a
+      href={href}
+      {...externalProps}
+      className={`inline-block rounded-md px-4 py-2 font-semibold transition-colors ${variants[variant]} ${className}`}
+    >
+      {children}
+    </a>
+  );
+}
+
+export default Button;
