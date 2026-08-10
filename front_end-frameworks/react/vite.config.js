@@ -3,9 +3,9 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
-export default defineConfig({
-  
-  base: "/holbertonschool-agentic_ai/",
+export default defineConfig(({ command }) => ({
+  // Déployé dans un sous-dossier de GitHub Pages pour cohabiter avec le projet vue.
+  base: command === 'build' ? '/holbertonschool-agentic_ai/react/' : '/',
 
   plugins: [
     react(),
@@ -17,4 +17,4 @@ export default defineConfig({
     port: 3000,
     strictPort: true,
   },
-})
+}))
