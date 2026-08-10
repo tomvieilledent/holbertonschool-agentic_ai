@@ -35,13 +35,13 @@ function About() {
           {/* Traditional/Agentic */}
           <div className="flex flex-col gap-4 self-center rounded-3xl border border-slate-800 bg-slate-950 p-8 text-left shadow-xl shadow-slate-950/40">
             <div className="font-bold text-slate-50">Traditional AI</div>
-            <div className="text-sm text-slate-500 md:text-base">
+            <div className="text-sm text-slate-400 md:text-base">
               Respond to direct instructions, generates content, answers
               questions, or analyzes information within a limited interaction.
             </div>
             <hr className="border-slate-800" />
             <div className="font-bold text-violet-300">Agentic AI</div>
-            <div className="text-sm text-slate-500 md:text-base">
+            <div className="text-sm text-slate-400 md:text-base">
               Understands a goal, chooses actions, uses external tools, followq
               a plan and adjusts its bihavior based on feedback
             </div>

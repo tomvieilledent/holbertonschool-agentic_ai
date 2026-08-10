@@ -17,7 +17,7 @@ function Header() {
 
         {/* Navigation + CTA */}
         <div className="flex items-center gap-8">
-          <nav className="hidden text-xs text-slate-500 md:flex">
+          <nav className="hidden text-xs text-slate-400 md:flex">
             <ul className="flex gap-8">
               {navLinks.map(({ label, href }) => (
                 <li key={label}>

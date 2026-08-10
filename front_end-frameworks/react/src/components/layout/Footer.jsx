@@ -49,7 +49,7 @@ function Footer() {
           <div className="flex flex-col gap-4">
             <Brand />
 
-            <p className="max-w-xs text-sm text-slate-500">
+            <p className="max-w-xs text-sm text-slate-400">
               Explore the future of development with Agentic AI.
             </p>
 
@@ -66,7 +66,7 @@ function Footer() {
           {/* Internal navigation */}
           <nav aria-label="Footer navigation">
             <h3 className="text-sm font-bold text-slate-50">Navigation</h3>
-            <ul className="mt-4 flex flex-col gap-3 text-sm text-slate-500">
+            <ul className="mt-4 flex flex-col gap-3 text-sm text-slate-400">
               {navLinks.map(({ label, href }) => (
                 <li key={label}>
                   <a
@@ -85,13 +85,14 @@ function Footer() {
             <h3 className="text-sm font-bold text-slate-50">
               Holberton School
             </h3>
-            <ul className="mt-4 flex flex-col gap-3 text-sm text-slate-500">
+            <ul className="mt-4 flex flex-col gap-3 text-sm text-slate-400">
               {externalLinks.map(({ label, href }) => (
                 <li key={label}>
                   <a
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`${label} — Holberton School`}
                     className="transition-colors hover:text-slate-50"
                   >
                     {label}
@@ -104,13 +105,14 @@ function Footer() {
           {/* Curriculum links */}
           <div>
             <h3 className="text-sm font-bold text-slate-50">Curriculum</h3>
-            <ul className="mt-4 flex flex-col gap-3 text-sm text-slate-500">
+            <ul className="mt-4 flex flex-col gap-3 text-sm text-slate-400">
               {curriculumLinks.map(({ label, href }) => (
                 <li key={label}>
                   <a
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`${label} — Curriculum`}
                     className="transition-colors hover:text-slate-50"
                   >
                     {label}
@@ -122,7 +124,7 @@ function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 border-t border-slate-800 pt-8 text-center text-xs text-slate-600">
+        <div className="mt-12 border-t border-slate-800 pt-8 text-center text-xs text-slate-400">
           © {currentYear} Agentic AI. Built for Holberton School.
         </div>
       </div>

@@ -20,7 +20,7 @@ function InsightCard({ category, title, description, image, index }) {
         <h3 className="text-lg font-bold text-slate-50">{title}</h3>
 
         {/* Description */}
-        <p className="max-w-xs text-sm text-slate-500 md:text-base">
+        <p className="max-w-xs text-sm text-slate-400 md:text-base">
           {description}
         </p>
       </div>

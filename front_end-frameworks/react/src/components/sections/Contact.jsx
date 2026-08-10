@@ -94,17 +94,17 @@ function Contact() {
         <div className="flex flex-col items-center gap-6 sm:flex-row sm:gap-10">
           <div className="flex items-center gap-2">
             <FolderCode className="text-violet-500" size={16} />
-            <span className="text-slate-500">Project-based learning</span>
+            <span className="text-slate-400">Project-based learning</span>
           </div>
 
           <div className="flex items-center gap-2">
             <Users className="text-violet-500" size={16} />
-            <span className="text-slate-500">Peer learning environment</span>
+            <span className="text-slate-400">Peer learning environment</span>
           </div>
 
           <div className="flex items-center gap-2">
             <Sparkles className="text-violet-500" size={16} />
-            <span className="text-slate-500">AI-powered workflows</span>
+            <span className="text-slate-400">AI-powered workflows</span>
           </div>
         </div>
 
@@ -206,7 +206,7 @@ function Contact() {
             </button>
 
             {/* Feedback message */}
-            <p className="text-center text-sm text-slate-500">{feedback}</p>
+            <p className="text-center text-sm text-slate-400">{feedback}</p>
           </form>
         </div>
       </div>

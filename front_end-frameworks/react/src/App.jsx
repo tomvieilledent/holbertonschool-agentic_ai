@@ -10,12 +10,14 @@ function App() {
   return (
     <>
       <Header />
-      <Hero />
-      <hr className="w-full border-slate-800" />
-      <About />
-      <Features />
-      <Insights />
-      <Contact />
+      <main>
+        <Hero />
+        <hr className="w-full border-slate-800" />
+        <About />
+        <Features />
+        <Insights />
+        <Contact />
+      </main>
       <Footer />
     </>
   );
