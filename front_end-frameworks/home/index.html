@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Agentic AI - Holberton School. Deux implementations de la meme landing page : React et Vue.js."
+    />
+    <title>Agentic AI - Holberton School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="relative flex min-h-screen flex-col items-center justify-center gap-10 overflow-hidden bg-slate-950 px-8 py-16 text-center text-slate-50"
+  >
+    <!-- Radial violet glow -->
+    <div
+      class="pointer-events-none absolute top-0 left-1/2 h-[40rem] w-[40rem] -translate-x-1/2 rounded-full bg-violet-500/20 blur-3xl"
+    ></div>
+
+    <span
+      class="relative rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-1.5 text-sm text-violet-300"
+    >
+      Holberton School
+    </span>
+
+    <h1 class="relative text-4xl font-extrabold tracking-tight sm:text-6xl">Agentic AI</h1>
+
+    <p class="relative max-w-xl text-base leading-relaxed text-slate-400">
+      La meme landing page, construite deux fois : une version React et une version Vue.js.
+      Choisissez l'implementation a consulter.
+    </p>
+
+    <div class="relative grid w-full max-w-2xl grid-cols-1 gap-5 sm:grid-cols-2">
+      <a
+        href="./vue/"
+        class="flex flex-col gap-2 rounded-3xl border border-slate-800 bg-slate-900 p-8 text-left transition hover:-translate-y-0.5 hover:border-violet-500"
+      >
+        <span class="text-xl font-bold text-slate-50">Projet Vue</span>
+        <span class="text-sm text-slate-400">
+          Version Vue 3, Single File Components et script setup.
+        </span>
+        <span class="mt-2 text-sm font-semibold text-violet-300">Ouvrir la version Vue</span>
+      </a>
+
+      <a
+        href="./react/"
+        class="flex flex-col gap-2 rounded-3xl border border-slate-800 bg-slate-900 p-8 text-left transition hover:-translate-y-0.5 hover:border-violet-500"
+      >
+        <span class="text-xl font-bold text-slate-50">Projet React</span>
+        <span class="text-sm text-slate-400">
+          Version React, composants fonctionnels et JSX.
+        </span>
+        <span class="mt-2 text-sm font-semibold text-violet-300">Ouvrir la version React</span>
+      </a>
+    </div>
+
+    <footer class="relative text-xs text-slate-600">Built for Holberton School.</footer>
+  </body>
+</html>
