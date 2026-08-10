@@ -1,13 +1,13 @@
-import SectionBadge from "../ui/SectionBadge";
-import SectionTitle from "../ui/SectionTitle";
-import Button from "../ui/Button";
-import StatCard from "../cards/StatCard";
+import SectionBadge from '../ui/SectionBadge';
+import SectionTitle from '../ui/SectionTitle';
+import Button from '../ui/Button';
+import StatCard from '../cards/StatCard';
 
 const stats = [
-  { value: "10K+", label: "Active agents" },
-  { value: "99.9%", label: "Uptime" },
-  { value: "50M+", label: "Tasks automated" },
-  { value: "24/7", label: "Support" },
+  { value: '10K+', label: 'Active agents' },
+  { value: '99.9%', label: 'Uptime' },
+  { value: '50M+', label: 'Tasks automated' },
+  { value: '24/7', label: 'Support' },
 ];
 
 function Hero() {
@@ -23,7 +23,7 @@ function Hero() {
         {/* Radial blue glow */}
         <div className="absolute top-40 right-1/4 h-120 w-120 rounded-full bg-blue-500/10 blur-3xl" />
         {/* Grid overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.12)_1px,transparent_1px)] bg-size[72px_72px] opacity-30" />
+        <div className="bg-size[72px_72px] absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.12)_1px,transparent_1px)] opacity-30" />
         {/* Depth vignette */}
         <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-slate-950" />
       </div>

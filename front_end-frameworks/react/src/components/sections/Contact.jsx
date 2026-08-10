@@ -1,17 +1,18 @@
-import { useState } from "react";
-import { FolderCode, Users, Sparkles, User, AtSign, Mail } from "lucide-react";
-import SectionBadge from "../ui/SectionBadge";
-import SectionTitle from "../ui/SectionTitle";
-import Button from "../ui/Button";
+import { useState } from 'react';
+import { FolderCode, Users, Sparkles, User, AtSign, Mail } from 'lucide-react';
+import SectionBadge from '../ui/SectionBadge';
+import SectionTitle from '../ui/SectionTitle';
+import Button from '../ui/Button';
 
-const DEFAULT_FEEDBACK = "Fill in the form and we will get back to you shortly.";
+const DEFAULT_FEEDBACK =
+  'Fill in the form and we will get back to you shortly.';
 
 function Contact() {
   /* Form data, sending state and dynamic feedback message. */
   const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    message: "",
+    fullName: '',
+    email: '',
+    message: '',
   });
   const [isSending, setIsSending] = useState(false);
   const [feedback, setFeedback] = useState(DEFAULT_FEEDBACK);
@@ -20,7 +21,7 @@ function Contact() {
   /* Basic frontend validation (must also be done on the backend in real apps). */
   const isNameValid = formData.fullName.trim().length >= 2;
   const isEmailValid =
-    formData.email.includes("@") && formData.email.includes(".");
+    formData.email.includes('@') && formData.email.includes('.');
   const isMessageValid = formData.message.trim().length >= 10;
   const isFormValid = isNameValid && isEmailValid && isMessageValid;
 
@@ -32,22 +33,22 @@ function Contact() {
   /* Border color only changes while the field is focused. */
   function fieldBorderClass(fieldName, isValid) {
     if (focusedField !== fieldName) {
-      return "border-slate-800";
+      return 'border-slate-800';
     }
-    return isValid ? "border-violet-500" : "border-red-500";
+    return isValid ? 'border-violet-500' : 'border-red-500';
   }
 
   async function handleSubmit(event) {
     event.preventDefault();
     setIsSending(true);
-    setFeedback("Sending your message...");
+    setFeedback('Sending your message...');
 
     /* Simulate a network request with a short delay. */
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
-    setFormData({ fullName: "", email: "", message: "" });
+    setFormData({ fullName: '', email: '', message: '' });
     setIsSending(false);
-    setFeedback("Message sent! We will reply to you soon.");
+    setFeedback('Message sent! We will reply to you soon.');
 
     /* Return to the default instruction after a short delay. */
     setTimeout(() => setFeedback(DEFAULT_FEEDBACK), 4000);
@@ -130,13 +131,13 @@ function Contact() {
                 type="text"
                 value={formData.fullName}
                 onChange={handleChange}
-                onFocus={() => setFocusedField("fullName")}
+                onFocus={() => setFocusedField('fullName')}
                 onBlur={() => setFocusedField(null)}
                 autoComplete="off"
                 placeholder="Your full name..."
                 className={`w-full rounded-lg border bg-black px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none ${fieldBorderClass(
-                  "fullName",
-                  isNameValid
+                  'fullName',
+                  isNameValid,
                 )}`}
               />
             </div>
@@ -157,13 +158,13 @@ function Contact() {
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
-                onFocus={() => setFocusedField("email")}
+                onFocus={() => setFocusedField('email')}
                 onBlur={() => setFocusedField(null)}
                 autoComplete="off"
                 placeholder="you@example.com"
                 className={`w-full rounded-lg border bg-black px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none ${fieldBorderClass(
-                  "email",
-                  isEmailValid
+                  'email',
+                  isEmailValid,
                 )}`}
               />
             </div>
@@ -184,13 +185,13 @@ function Contact() {
                 rows={5}
                 value={formData.message}
                 onChange={handleChange}
-                onFocus={() => setFocusedField("message")}
+                onFocus={() => setFocusedField('message')}
                 onBlur={() => setFocusedField(null)}
                 autoComplete="off"
                 placeholder="Tell us about your project or learning goals..."
                 className={`w-full resize-none rounded-lg border bg-black px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none ${fieldBorderClass(
-                  "message",
-                  isMessageValid
+                  'message',
+                  isMessageValid,
                 )}`}
               />
             </div>
@@ -201,7 +202,7 @@ function Contact() {
               disabled={!isFormValid || isSending}
               className="rounded-lg bg-violet-500 px-6 py-3 font-semibold text-white transition-colors hover:bg-violet-600 disabled:cursor-not-allowed disabled:opacity-50"
             >
-              {isSending ? "Sending..." : "Send message"}
+              {isSending ? 'Sending...' : 'Send message'}
             </button>
 
             {/* Feedback message */}

@@ -1,4 +1,4 @@
-import { BrainCircuit } from "lucide-react";
+import { BrainCircuit } from 'lucide-react';
 
 function Brand() {
   return (

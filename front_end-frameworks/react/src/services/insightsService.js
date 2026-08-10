@@ -1,4 +1,4 @@
-import insights from "../data/insights";
+import insights from '../data/insights';
 
 /* Simulates an asynchronous API call that returns the insights data. */
 export async function getInsights() {

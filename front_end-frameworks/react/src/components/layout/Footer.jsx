@@ -1,40 +1,40 @@
-import { Camera, Music2, X, Play } from "lucide-react";
-import Brand from "../ui/Brand";
-import SocialLink from "../ui/SocialLink";
+import { Camera, Music2, X, Play } from 'lucide-react';
+import Brand from '../ui/Brand';
+import SocialLink from '../ui/SocialLink';
 
 const socialLinks = [
-  { icon: Camera, label: "Instagram", href: "https://www.instagram.com" },
-  { icon: Music2, label: "TikTok", href: "https://www.tiktok.com" },
-  { icon: X, label: "X", href: "https://www.x.com" },
-  { icon: Play, label: "YouTube", href: "https://www.youtube.com" },
+  { icon: Camera, label: 'Instagram', href: 'https://www.instagram.com' },
+  { icon: Music2, label: 'TikTok', href: 'https://www.tiktok.com' },
+  { icon: X, label: 'X', href: 'https://www.x.com' },
+  { icon: Play, label: 'YouTube', href: 'https://www.youtube.com' },
 ];
 
 const navLinks = [
-  { label: "Home", href: "#hero-section" },
-  { label: "About", href: "#about-section" },
-  { label: "Features", href: "#features-section" },
-  { label: "Insights", href: "#insights-section" },
-  { label: "Contact", href: "#contact-section" },
+  { label: 'Home', href: '#hero-section' },
+  { label: 'About', href: '#about-section' },
+  { label: 'Features', href: '#features-section' },
+  { label: 'Insights', href: '#insights-section' },
+  { label: 'Contact', href: '#contact-section' },
 ];
 
 const externalLinks = [
-  { label: "About", href: "https://www.holbertonschool.fr/" },
+  { label: 'About', href: 'https://www.holbertonschool.fr/' },
   {
-    label: "Methodology",
-    href: "https://www.holbertonschool.fr/methodologie",
+    label: 'Methodology',
+    href: 'https://www.holbertonschool.fr/methodologie',
   },
-  { label: "Story", href: "https://www.holbertonschool.fr/a-propos" },
-  { label: "Agenda", href: "https://www.holbertonschool.fr/" },
+  { label: 'Story', href: 'https://www.holbertonschool.fr/a-propos' },
+  { label: 'Agenda', href: 'https://www.holbertonschool.fr/' },
 ];
 
 const curriculumLinks = [
   {
-    label: "Bachelor",
-    href: "https://www.holbertonschool.fr/programme/bachelor-ai-augmented-software-engineering",
+    label: 'Bachelor',
+    href: 'https://www.holbertonschool.fr/programme/bachelor-ai-augmented-software-engineering',
   },
   {
-    label: "Program",
-    href: "https://www.holbertonschool.fr/programme/bachelor-ai-augmented-software-engineering#programme",
+    label: 'Program',
+    href: 'https://www.holbertonschool.fr/programme/bachelor-ai-augmented-software-engineering#programme',
   },
 ];
 
@@ -82,7 +82,9 @@ function Footer() {
 
           {/* External links */}
           <div>
-            <h3 className="text-sm font-bold text-slate-50">Holberton School</h3>
+            <h3 className="text-sm font-bold text-slate-50">
+              Holberton School
+            </h3>
             <ul className="mt-4 flex flex-col gap-3 text-sm text-slate-500">
               {externalLinks.map(({ label, href }) => (
                 <li key={label}>

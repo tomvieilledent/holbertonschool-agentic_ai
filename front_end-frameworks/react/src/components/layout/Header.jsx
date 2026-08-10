@@ -1,11 +1,11 @@
-import Brand from "../ui/Brand";
-import Button from "../ui/Button";
+import Brand from '../ui/Brand';
+import Button from '../ui/Button';
 
 const navLinks = [
-  { label: "About", href: "#about-section" },
-  { label: "Features", href: "#features-section" },
-  { label: "Insights", href: "#insights-section" },
-  { label: "Contact", href: "#contact-section" },
+  { label: 'About', href: '#about-section' },
+  { label: 'Features', href: '#features-section' },
+  { label: 'Insights', href: '#insights-section' },
+  { label: 'Contact', href: '#contact-section' },
 ];
 
 function Header() {

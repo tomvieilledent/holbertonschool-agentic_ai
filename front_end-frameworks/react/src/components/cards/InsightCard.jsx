@@ -1,6 +1,6 @@
 function InsightCard({ category, title, description, image, index }) {
   /* The first card spans two columns to stand out from the others. */
-  const layoutClass = index === 0 ? "md:col-span-2" : "";
+  const layoutClass = index === 0 ? 'md:col-span-2' : '';
 
   return (
     <article

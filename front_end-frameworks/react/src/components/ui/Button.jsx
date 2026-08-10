@@ -1,19 +1,19 @@
 const variants = {
   primary:
-    "bg-violet-500 text-slate-50 shadow-lg shadow-violet-500/40 hover:bg-violet-600",
+    'bg-violet-500 text-slate-50 shadow-lg shadow-violet-500/40 hover:bg-violet-600',
   secondary:
-    "border border-slate-800 bg-slate-950 text-slate-50 hover:bg-slate-900",
+    'border border-slate-800 bg-slate-950 text-slate-50 hover:bg-slate-900',
 };
 
 function Button({
   href,
   children,
-  variant = "primary",
+  variant = 'primary',
   external = false,
-  className = "",
+  className = '',
 }) {
   const externalProps = external
-    ? { target: "_blank", rel: "noopener noreferrer" }
+    ? { target: '_blank', rel: 'noopener noreferrer' }
     : {};
 
   return (

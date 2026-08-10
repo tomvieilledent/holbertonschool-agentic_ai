@@ -1,6 +1,6 @@
-import { steps } from "../../data/steps";
-import SectionBadge from "../ui/SectionBadge";
-import SectionTitle from "../ui/SectionTitle";
+import { steps } from '../../data/steps';
+import SectionBadge from '../ui/SectionBadge';
+import SectionTitle from '../ui/SectionTitle';
 
 function About() {
   return (
@@ -64,7 +64,7 @@ function About() {
                 </div>
 
                 {/* Text */}
-                <div className={step.id !== steps.length ? "pb-8" : ""}>
+                <div className={step.id !== steps.length ? 'pb-8' : ''}>
                   <h3 className="text-xl font-bold text-slate-50">
                     {step.title}
                   </h3>

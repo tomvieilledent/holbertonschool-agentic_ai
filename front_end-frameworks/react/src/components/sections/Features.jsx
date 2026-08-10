@@ -1,7 +1,7 @@
-import features from "../../data/features";
-import FeatureCard from "../cards/FeatureCard";
-import SectionBadge from "../ui/SectionBadge";
-import SectionTitle from "../ui/SectionTitle";
+import features from '../../data/features';
+import FeatureCard from '../cards/FeatureCard';
+import SectionBadge from '../ui/SectionBadge';
+import SectionTitle from '../ui/SectionTitle';
 
 function Features() {
   return (
