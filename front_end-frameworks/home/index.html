@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Agentic AI - Holberton School. Deux implementations de la meme landing page : React et Vue.js."
+      content="Agentic AI - Holberton School. The same landing page implemented twice: once in React and once in Vue.js."
     />
     <title>Agentic AI - Holberton School</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,31 +28,62 @@
     <h1 class="relative text-4xl font-extrabold tracking-tight sm:text-6xl">Agentic AI</h1>
 
     <p class="relative max-w-xl text-base leading-relaxed text-slate-400">
-      La meme landing page, construite deux fois : une version React et une version Vue.js.
-      Choisissez l'implementation a consulter.
+      The same landing page, built twice. Pick the implementation you want to explore: one in
+      React, one in Vue.js.
     </p>
 
     <div class="relative grid w-full max-w-2xl grid-cols-1 gap-5 sm:grid-cols-2">
-      <a
-        href="./vue/"
-        class="flex flex-col gap-2 rounded-3xl border border-slate-800 bg-slate-900 p-8 text-left transition hover:-translate-y-0.5 hover:border-violet-500"
-      >
-        <span class="text-xl font-bold text-slate-50">Projet Vue</span>
-        <span class="text-sm text-slate-400">
-          Version Vue 3, Single File Components et script setup.
-        </span>
-        <span class="mt-2 text-sm font-semibold text-violet-300">Ouvrir la version Vue</span>
-      </a>
-
+      <!-- React card -->
       <a
         href="./react/"
-        class="flex flex-col gap-2 rounded-3xl border border-slate-800 bg-slate-900 p-8 text-left transition hover:-translate-y-0.5 hover:border-violet-500"
+        class="group flex flex-col items-center gap-3 rounded-3xl border border-slate-800 bg-slate-900 p-8 text-center transition hover:-translate-y-0.5 hover:border-violet-500"
       >
-        <span class="text-xl font-bold text-slate-50">Projet React</span>
+        <!-- React logo -->
+        <svg
+          class="h-12 w-12"
+          viewBox="-11.5 -10.23174 23 20.46348"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <circle cx="0" cy="0" r="2.05" fill="#61dafb" />
+          <g stroke="#61dafb" stroke-width="1" fill="none">
+            <ellipse rx="11" ry="4.2" />
+            <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+            <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+          </g>
+        </svg>
+        <span class="text-xl font-bold text-slate-50">React project</span>
         <span class="text-sm text-slate-400">
-          Version React, composants fonctionnels et JSX.
+          The same Agentic AI landing page, built with React using function components, JSX syntax
+          and the Hooks API.
         </span>
-        <span class="mt-2 text-sm font-semibold text-violet-300">Ouvrir la version React</span>
+        <span class="mt-auto pt-2 text-sm font-semibold text-violet-300">Open the React version</span>
+      </a>
+
+      <!-- Vue card -->
+      <a
+        href="./vue/"
+        class="group flex flex-col items-center gap-3 rounded-3xl border border-slate-800 bg-slate-900 p-8 text-center transition hover:-translate-y-0.5 hover:border-violet-500"
+      >
+        <!-- Vue.js logo -->
+        <svg
+          class="h-12 w-12"
+          viewBox="0 0 196.32 170.02"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path d="M120.83 0 98.16 39.26 75.49 0H0l98.16 170.02L196.32 0h-75.49z" fill="#41b883" />
+          <path
+            d="M120.83 0 98.16 39.26 75.49 0H39.26l58.9 102.01L157.06 0h-36.23z"
+            fill="#35495e"
+          />
+        </svg>
+        <span class="text-xl font-bold text-slate-50">Vue project</span>
+        <span class="text-sm text-slate-400">
+          The same Agentic AI landing page, built with Vue 3 using Single File Components, template
+          syntax and the Composition API.
+        </span>
+        <span class="mt-auto pt-2 text-sm font-semibold text-violet-300">Open the Vue version</span>
       </a>
     </div>
 
