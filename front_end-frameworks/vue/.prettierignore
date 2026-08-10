@@ -3,3 +3,6 @@ dist
 public
 package-lock.json
 *.log
+# Markdown exclu : Prettier reformate le contenu des blocs de code (```vue / ```jsx)
+# et aplatit les exemples de migration.
+*.md

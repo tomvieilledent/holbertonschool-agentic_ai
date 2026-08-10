@@ -9,7 +9,9 @@
     "fix": "eslint . --fix",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist -e vue"
+    "deploy": "gh-pages -d dist -e vue",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "lucide-vue-next": "^1.0.0",
