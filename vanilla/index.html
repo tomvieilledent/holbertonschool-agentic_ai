@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore Agentic AI through a modern landing page: autonomous agents that think, plan and execute complex tasks. Built for Holberton School — plain HTML/CSS/vanilla JS version."
+    />
+    <title>Agentic AI — Vanilla HTML/CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  </head>
+
+  <body class="bg-slate-950 text-slate-50">
+    <!-- ============ HEADER ============ -->
+    <header
+      class="fixed top-0 right-0 left-0 z-50 w-full border-b border-slate-800 bg-slate-950/80 backdrop-blur"
+    >
+      <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-6">
+        <a href="#hero-section" class="flex items-center gap-2">
+          <div
+            class="flex h-7 w-7 items-center justify-center rounded-lg bg-violet-500 text-slate-50 shadow-lg shadow-violet-500/40"
+          >
+            <i data-lucide="brain-circuit" class="h-4 w-4"></i>
+          </div>
+          <span class="text-sm font-bold text-slate-50">Agentic AI</span>
+        </a>
+
+        <div class="flex items-center gap-8">
+          <nav class="hidden text-xs text-slate-400 md:flex">
+            <ul class="flex gap-8">
+              <li><a class="transition-colors hover:text-slate-50" href="#about-section">About</a></li>
+              <li><a class="transition-colors hover:text-slate-50" href="#features-section">Features</a></li>
+              <li><a class="transition-colors hover:text-slate-50" href="#insights-section">Insights</a></li>
+              <li><a class="transition-colors hover:text-slate-50" href="#contact-section">Contact</a></li>
+            </ul>
+          </nav>
+
+          <a
+            href="https://www.holbertonschool.fr/rejoindre-lhippocamp"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block rounded-md bg-violet-500 px-4 py-2 text-xs font-semibold text-slate-50 shadow-lg shadow-violet-500/40 transition-colors hover:bg-violet-600"
+          >
+            Enroll now
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section id="hero-section" class="relative overflow-hidden bg-black pt-36 pb-24">
+        <div class="pointer-events-none absolute inset-0">
+          <div
+            class="absolute top-0 left-1/2 h-160 w-160 -translate-x-1/2 rounded-full bg-violet-500/20 blur-3xl"
+          ></div>
+          <div class="absolute top-40 right-1/4 h-120 w-120 rounded-full bg-blue-500/10 blur-3xl"></div>
+          <div
+            class="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.12)_1px,transparent_1px)] opacity-30 [background-size:72px_72px]"
+          ></div>
+          <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-950"></div>
+        </div>
+
+        <div class="relative mx-auto flex w-full max-w-6xl flex-col items-center gap-8 px-6 text-center">
+          <div
+            class="flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-2 text-xs text-violet-300"
+          >
+            <span>✦</span><span>The future of coding</span><span>✦</span>
+          </div>
+
+          <h1 class="leading-none font-black tracking-tight text-5xl md:text-7xl">
+            <span class="block text-slate-50">Build smarter workflows</span>
+            <span class="block text-violet-300">with Agentic AI</span>
+          </h1>
+
+          <p class="max-w-2xl text-sm text-slate-300 md:text-base">
+            Create autonomous AI agents that think, plan, and execute complex tasks. Transform your
+            business with intelligent automation.
+          </p>
+
+          <div class="flex flex-col items-center gap-4 sm:flex-row">
+            <a
+              href="#contact-section"
+              class="inline-block rounded-md bg-violet-500 px-4 py-2 text-sm font-semibold whitespace-nowrap text-slate-50 shadow-lg shadow-violet-500/40 transition-colors hover:bg-violet-600 md:text-base"
+              >Start learning with Holberton School</a
+            >
+            <a
+              href="#features-section"
+              class="inline-block rounded-md border border-slate-800 bg-slate-950 px-4 py-2 text-sm font-semibold whitespace-nowrap text-slate-50 transition-colors hover:bg-slate-900 md:text-base"
+              >Methodology</a
+            >
+          </div>
+
+          <div class="mt-12 grid w-full grid-cols-2 gap-8 md:grid-cols-4">
+            <div class="rounded-xl border border-slate-800 bg-slate-950 p-6 text-center shadow-xl shadow-slate-950/40">
+              <p class="text-3xl leading-none font-black tracking-tight text-violet-300 md:text-4xl">10K+</p>
+              <p class="mt-2 text-sm text-slate-300 md:text-base">Active agents</p>
+            </div>
+            <div class="rounded-xl border border-slate-800 bg-slate-950 p-6 text-center shadow-xl shadow-slate-950/40">
+              <p class="text-3xl leading-none font-black tracking-tight text-violet-300 md:text-4xl">99.9%</p>
+              <p class="mt-2 text-sm text-slate-300 md:text-base">Uptime</p>
+            </div>
+            <div class="rounded-xl border border-slate-800 bg-slate-950 p-6 text-center shadow-xl shadow-slate-950/40">
+              <p class="text-3xl leading-none font-black tracking-tight text-violet-300 md:text-4xl">50M+</p>
+              <p class="mt-2 text-sm text-slate-300 md:text-base">Tasks automated</p>
+            </div>
+            <div class="rounded-xl border border-slate-800 bg-slate-950 p-6 text-center shadow-xl shadow-slate-950/40">
+              <p class="text-3xl leading-none font-black tracking-tight text-violet-300 md:text-4xl">24/7</p>
+              <p class="mt-2 text-sm text-slate-300 md:text-base">Support</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="w-full border-slate-800" />
+
+      <!-- ============ ABOUT ============ -->
+      <section id="about-section" class="relative bg-black py-24">
+        <div class="mx-auto flex w-full max-w-6xl flex-col items-center gap-8 px-6 text-center">
+          <div
+            class="flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-2 text-xs text-violet-300"
+          >
+            <span>✧</span><span>What is agentic AI ?</span><span>✧</span>
+          </div>
+
+          <h2 class="leading-none font-black tracking-tight text-4xl md:text-5xl">
+            <span class="block text-slate-50">AI that does more than answer</span>
+            <span class="block text-violet-300">It acts with purpose</span>
+          </h2>
+
+          <p class="max-w-2xl text-left text-sm text-slate-300 md:text-base">
+            Agentic AI refers to artificial intelligence systems designed to purpose goals, makes
+            decisions, use tools, and adapt their actions across multiple steps. Instead of only
+            responding to a single promp, an AI agent can break down a task, plan a strategy, execute
+            actions, evaluate results and continue until the objective is reached.
+          </p>
+
+          <div class="mt-18 grid w-full gap-8 md:grid-cols-2">
+            <div
+              class="flex flex-col gap-4 self-center rounded-3xl border border-slate-800 bg-slate-950 p-8 text-left shadow-xl shadow-slate-950/40"
+            >
+              <div class="font-bold text-slate-50">Traditional AI</div>
+              <div class="text-sm text-slate-400 md:text-base">
+                Respond to direct instructions, generates content, answers questions, or analyzes
+                information within a limited interaction.
+              </div>
+              <hr class="border-slate-800" />
+              <div class="font-bold text-violet-300">Agentic AI</div>
+              <div class="text-sm text-slate-400 md:text-base">
+                Understands a goal, chooses actions, uses external tools, followq a plan and adjusts
+                its bihavior based on feedback
+              </div>
+            </div>
+
+            <div class="flex flex-col text-left">
+              <div class="flex gap-6">
+                <div class="flex flex-col items-center">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-full bg-violet-500 font-bold text-slate-50 shadow-lg shadow-violet-500/40"
+                  >
+                    1
+                  </div>
+                  <div class="w-px flex-1 bg-violet-500"></div>
+                </div>
+                <div class="pb-8">
+                  <h3 class="text-xl font-bold text-slate-50">Understand the goal</h3>
+                  <p class="mt-2 text-xs text-slate-300 md:text-sm">
+                    The agent interprets the user's objective and identifies what needs to be
+                    achieved.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <div class="flex flex-col items-center">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-full bg-violet-500 font-bold text-slate-50 shadow-lg shadow-violet-500/40"
+                  >
+                    2
+                  </div>
+                  <div class="w-px flex-1 bg-violet-500"></div>
+                </div>
+                <div class="pb-8">
+                  <h3 class="text-xl font-bold text-slate-50">Plan the steps</h3>
+                  <p class="mt-2 text-xs text-slate-300 md:text-sm">
+                    It breaks the objective into smaller actions and selects the most relevant
+                    path.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <div class="flex flex-col items-center">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-full bg-violet-500 font-bold text-slate-50 shadow-lg shadow-violet-500/40"
+                  >
+                    3
+                  </div>
+                  <div class="w-px flex-1 bg-violet-500"></div>
+                </div>
+                <div class="pb-8">
+                  <h3 class="text-xl font-bold text-slate-50">Use tools and data</h3>
+                  <p class="mt-2 text-xs text-slate-300 md:text-sm">
+                    It can interact with APIs, databases, files, interfaces, or other services to
+                    complete tasks.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <div class="flex flex-col items-center">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-full bg-violet-500 font-bold text-slate-50 shadow-lg shadow-violet-500/40"
+                  >
+                    4
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-slate-50">Evaluate and adapt</h3>
+                  <p class="mt-2 text-xs text-slate-300 md:text-sm">
+                    It checks results, corrects mistakes, and adjusts the next action when needed.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FEATURES ============ -->
+      <section id="features-section" class="relative bg-black py-24">
+        <div class="mx-auto flex w-full max-w-6xl flex-col items-center gap-8 px-6 text-center">
+          <div
+            class="flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-2 text-xs text-violet-300"
+          >
+            <span>✦</span><span>Features</span><span>✦</span>
+          </div>
+
+          <h2 class="leading-none font-black tracking-tight text-4xl md:text-5xl">
+            <span class="block text-slate-50">Everything you need to build</span>
+            <span class="block text-violet-300">with powerful AI agents</span>
+          </h2>
+
+          <div class="mt-12 grid w-full gap-8 text-left md:grid-cols-2 lg:grid-cols-3">
+            <article class="flex flex-col gap-4 rounded-3xl border border-slate-800 bg-slate-950 p-8 shadow-xl shadow-slate-950/40">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-violet-500 text-slate-50 shadow-lg shadow-violet-500/40">
+                <i data-lucide="bot" class="h-6 w-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-50">Autonomous agents</h3>
+              <p class="text-sm text-slate-400 md:text-base">Deploy self-sufficient AI agents that can work 24/7 without supervision.</p>
+            </article>
+            <article class="flex flex-col gap-4 rounded-3xl border border-slate-800 bg-slate-950 p-8 shadow-xl shadow-slate-950/40">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-violet-500 text-slate-50 shadow-lg shadow-violet-500/40">
+                <i data-lucide="workflow" class="h-6 w-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-50">Multi-step planning</h3>
+              <p class="text-sm text-slate-400 md:text-base">Break down complex goals into actionable steps with intelligent planning.</p>
+            </article>
+            <article class="flex flex-col gap-4 rounded-3xl border border-slate-800 bg-slate-950 p-8 shadow-xl shadow-slate-950/40">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-violet-500 text-slate-50 shadow-lg shadow-violet-500/40">
+                <i data-lucide="brain" class="h-6 w-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-50">Advanced reasoning</h3>
+              <p class="text-sm text-slate-400 md:text-base">Leverage state-of-the-art language models for intelligent decision-making.</p>
+            </article>
+            <article class="flex flex-col gap-4 rounded-3xl border border-slate-800 bg-slate-950 p-8 shadow-xl shadow-slate-950/40">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-violet-500 text-slate-50 shadow-lg shadow-violet-500/40">
+                <i data-lucide="database" class="h-6 w-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-50">Memory &amp; context</h3>
+              <p class="text-sm text-slate-400 md:text-base">Persistent memory allows agents to learn and improve over time.</p>
+            </article>
+            <article class="flex flex-col gap-4 rounded-3xl border border-slate-800 bg-slate-950 p-8 shadow-xl shadow-slate-950/40">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-violet-500 text-slate-50 shadow-lg shadow-violet-500/40">
+                <i data-lucide="wrench" class="h-6 w-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-50">Tool integration</h3>
+              <p class="text-sm text-slate-400 md:text-base">Connect to thousands of APIs and services seamlessly.</p>
+            </article>
+            <article class="flex flex-col gap-4 rounded-3xl border border-slate-800 bg-slate-950 p-8 shadow-xl shadow-slate-950/40">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-violet-500 text-slate-50 shadow-lg shadow-violet-500/40">
+                <i data-lucide="shield-check" class="h-6 w-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-50">Enterprise Security</h3>
+              <p class="text-sm text-slate-400 md:text-base">Bank-level encryption and compliance with SOC2, GDPR, and HIPAA.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ INSIGHTS ============ -->
+      <section id="insights-section" class="relative bg-black py-24">
+        <div class="mx-auto flex w-full max-w-6xl flex-col items-center gap-8 px-6 text-center">
+          <div
+            class="flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-2 text-xs text-violet-300"
+          >
+            <span>✧</span><span>Insights</span><span>✧</span>
+          </div>
+
+          <h2 class="leading-none font-black tracking-tight text-4xl md:text-5xl">
+            <span class="block text-slate-50">Explore Agentic AI</span>
+            <span class="block text-violet-300">Through real-world scenes</span>
+          </h2>
+
+          <!-- Filled by insights.js after a simulated async load -->
+          <p id="insights-error" class="hidden text-sm text-red-400"></p>
+          <div id="insights-grid" class="mt-12 grid w-full gap-8 sm:grid-cols-2 lg:grid-cols-3"></div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section id="contact-section" class="relative bg-black py-24">
+        <div class="mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 text-center">
+          <div
+            class="flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-2 text-sm font-medium text-violet-300"
+          >
+            <span>✧</span><span>Start your AI journey ?</span><span>✧</span>
+          </div>
+
+          <h2 class="leading-none font-black tracking-tight text-5xl md:text-7xl">
+            <span class="block text-slate-50">Ready to Explore</span>
+            <span class="block text-violet-300">Agentic AI ?</span>
+          </h2>
+
+          <div class="flex flex-col items-center gap-4 sm:flex-row">
+            <a
+              href="https://www.holbertonschool.fr/rejoindre-lhippocamp"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block rounded-md bg-violet-500 px-4 py-2 text-sm font-semibold text-slate-50 shadow-lg shadow-violet-500/40 transition-colors hover:bg-violet-600 md:text-base"
+              >Enroll at Holberton School ➔</a
+            >
+            <a
+              href="#features-section"
+              class="inline-block rounded-md border border-slate-800 bg-slate-950 px-4 py-2 text-sm font-semibold text-slate-50 transition-colors hover:bg-slate-900 md:text-base"
+              >Need more information ?</a
+            >
+          </div>
+
+          <div class="flex flex-col items-center gap-6 sm:flex-row sm:gap-10">
+            <div class="flex items-center gap-2">
+              <i data-lucide="folder-code" class="h-4 w-4 text-violet-500"></i>
+              <span class="text-slate-400">Project-based learning</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="users" class="h-4 w-4 text-violet-500"></i>
+              <span class="text-slate-400">Peer learning environment</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="sparkles" class="h-4 w-4 text-violet-500"></i>
+              <span class="text-slate-400">AI-powered workflows</span>
+            </div>
+          </div>
+
+          <div
+            class="mt-8 w-full max-w-2xl rounded-3xl border border-slate-800 bg-slate-950/80 p-8 shadow-2xl shadow-slate-950/40 backdrop-blur"
+          >
+            <form id="contact-form" autocomplete="off" class="flex flex-col gap-6">
+              <div class="text-left">
+                <label for="fullName" class="mb-2 flex items-center gap-2 font-semibold text-slate-50">
+                  <i data-lucide="user" class="h-5 w-5 text-violet-500"></i>
+                  Full name
+                </label>
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Your full name..."
+                  class="w-full rounded-lg border border-slate-800 bg-black px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none"
+                />
+              </div>
+
+              <div class="text-left">
+                <label for="email" class="mb-2 flex items-center gap-2 font-semibold text-slate-50">
+                  <i data-lucide="at-sign" class="h-5 w-5 text-violet-500"></i>
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="off"
+                  placeholder="you@example.com"
+                  class="w-full rounded-lg border border-slate-800 bg-black px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none"
+                />
+              </div>
+
+              <div class="text-left">
+                <label for="message" class="mb-2 flex items-center gap-2 font-semibold text-slate-50">
+                  <i data-lucide="mail" class="h-5 w-5 text-violet-500"></i>
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  autocomplete="off"
+                  placeholder="Tell us about your project or learning goals..."
+                  class="w-full resize-none rounded-lg border border-slate-800 bg-black px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none"
+                ></textarea>
+              </div>
+
+              <button
+                id="submit-button"
+                type="submit"
+                disabled
+                class="rounded-lg bg-violet-500 px-6 py-3 font-semibold text-white transition-colors hover:bg-violet-600 disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                Send message
+              </button>
+
+              <p id="form-feedback" class="text-center text-sm text-slate-400">
+                Fill in the form and we will get back to you shortly.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="border-t border-slate-800 bg-black">
+      <div class="mx-auto w-full max-w-6xl px-6 py-16">
+        <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+          <div class="flex flex-col gap-4">
+            <a href="#hero-section" class="flex items-center gap-2">
+              <div class="flex h-7 w-7 items-center justify-center rounded-lg bg-violet-500 text-slate-50 shadow-lg shadow-violet-500/40">
+                <i data-lucide="brain-circuit" class="h-4 w-4"></i>
+              </div>
+              <span class="text-sm font-bold text-slate-50">Agentic AI</span>
+            </a>
+            <p class="max-w-xs text-sm text-slate-400">Explore the future of development with Agentic AI.</p>
+            <ul class="flex gap-3">
+              <li>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-800 text-slate-400 transition-colors hover:border-violet-500 hover:text-violet-300">
+                  <i data-lucide="camera" class="h-4 w-4"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-800 text-slate-400 transition-colors hover:border-violet-500 hover:text-violet-300">
+                  <i data-lucide="music-2" class="h-4 w-4"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.x.com" target="_blank" rel="noopener noreferrer" aria-label="X" class="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-800 text-slate-400 transition-colors hover:border-violet-500 hover:text-violet-300">
+                  <i data-lucide="x" class="h-4 w-4"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-800 text-slate-400 transition-colors hover:border-violet-500 hover:text-violet-300">
+                  <i data-lucide="play" class="h-4 w-4"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <nav aria-label="Footer navigation">
+            <h3 class="text-sm font-bold text-slate-50">Navigation</h3>
+            <ul class="mt-4 flex flex-col gap-3 text-sm text-slate-400">
+              <li><a href="#hero-section" class="transition-colors hover:text-slate-50">Home</a></li>
+              <li><a href="#about-section" class="transition-colors hover:text-slate-50">About</a></li>
+              <li><a href="#features-section" class="transition-colors hover:text-slate-50">Features</a></li>
+              <li><a href="#insights-section" class="transition-colors hover:text-slate-50">Insights</a></li>
+              <li><a href="#contact-section" class="transition-colors hover:text-slate-50">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div>
+            <h3 class="text-sm font-bold text-slate-50">Holberton School</h3>
+            <ul class="mt-4 flex flex-col gap-3 text-sm text-slate-400">
+              <li><a href="https://www.holbertonschool.fr/" target="_blank" rel="noopener noreferrer" aria-label="About — Holberton School" class="transition-colors hover:text-slate-50">About</a></li>
+              <li><a href="https://www.holbertonschool.fr/methodologie" target="_blank" rel="noopener noreferrer" aria-label="Methodology — Holberton School" class="transition-colors hover:text-slate-50">Methodology</a></li>
+              <li><a href="https://www.holbertonschool.fr/a-propos" target="_blank" rel="noopener noreferrer" aria-label="Story — Holberton School" class="transition-colors hover:text-slate-50">Story</a></li>
+              <li><a href="https://www.holbertonschool.fr/" target="_blank" rel="noopener noreferrer" aria-label="Agenda — Holberton School" class="transition-colors hover:text-slate-50">Agenda</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-bold text-slate-50">Curriculum</h3>
+            <ul class="mt-4 flex flex-col gap-3 text-sm text-slate-400">
+              <li><a href="https://www.holbertonschool.fr/programme/bachelor-ai-augmented-software-engineering" target="_blank" rel="noopener noreferrer" aria-label="Bachelor — Curriculum" class="transition-colors hover:text-slate-50">Bachelor</a></li>
+              <li><a href="https://www.holbertonschool.fr/programme/bachelor-ai-augmented-software-engineering#programme" target="_blank" rel="noopener noreferrer" aria-label="Program — Curriculum" class="transition-colors hover:text-slate-50">Program</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-12 border-t border-slate-800 pt-8 text-center text-xs text-slate-400">
+          © <span id="current-year"></span> Agentic AI. Built for Holberton School.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // ---- Icons ----
+      lucide.createIcons()
+
+      // ---- Footer year ----
+      document.getElementById('current-year').textContent = new Date().getFullYear()
+
+      // ---- Insights: data + simulated async load (mirrors the other 3 versions) ----
+      const insights = [
+        {
+          category: 'Development',
+          title: 'Autonomous development',
+          description:
+            'AI agents can generate code, debug issues, write documentation, and support developers across complex workflows.',
+          image:
+            'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2369&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        },
+        {
+          category: 'Collaboration',
+          title: 'Human-AI collaboration',
+          description:
+            'Agents help teams move faster while humans define goals, validate decisions, and keep creative control.',
+          image:
+            'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        },
+        {
+          category: 'Analytics',
+          title: 'Data-driven decisions',
+          description:
+            'AI agents can analyze large datasets, detect patterns, and support smarter technical and business decisions.',
+          image:
+            'https://images.unsplash.com/photo-1579226905180-636b76d96082?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        },
+        {
+          category: 'Productivity',
+          title: 'Workflow automation',
+          description:
+            'Agents can connect tools, execute repetitive tasks, and automate multi-step processes across modern teams.',
+          image:
+            'https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        },
+        {
+          category: 'Creation',
+          title: 'Creative systems',
+          description:
+            'AI agents can assist with design, content generation, prototyping, and creative exploration at scale.',
+          image:
+            'https://images.unsplash.com/photo-1558655146-605d86ed31b3?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        },
+      ]
+
+      // Simulates the async API call the other 3 versions make.
+      function getInsights() {
+        return new Promise((resolve) => setTimeout(() => resolve(insights), 300))
+      }
+
+      function renderInsightCard(insight, index) {
+        const article = document.createElement('article')
+        article.className = [
+          'relative flex min-h-80 flex-col justify-end overflow-hidden rounded-3xl border',
+          'border-slate-800 bg-slate-950 shadow-xl shadow-slate-950/40',
+          index === 0 ? 'md:col-span-2' : '',
+        ].join(' ')
+
+        article.innerHTML = `
+          <img src="${insight.image}" alt="${insight.title}" class="absolute inset-0 h-full w-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
+          <div class="relative flex flex-col gap-2 p-8 text-left">
+            <div class="flex w-fit items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-2 text-xs text-violet-300">
+              <span>${insight.category}</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-50">${insight.title}</h3>
+            <p class="max-w-xs text-sm text-slate-400 md:text-base">${insight.description}</p>
+          </div>
+        `
+        return article
+      }
+
+      async function loadInsights() {
+        const grid = document.getElementById('insights-grid')
+        const errorEl = document.getElementById('insights-error')
+        try {
+          const data = await getInsights()
+          data.forEach((insight, index) => grid.appendChild(renderInsightCard(insight, index)))
+        } catch {
+          errorEl.textContent = 'Unable to load insights. Please try again later.'
+          errorEl.classList.remove('hidden')
+          grid.classList.add('hidden')
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', loadInsights)
+
+      // ---- Contact form: manual validation + manual two-way binding ----
+      const form = document.getElementById('contact-form')
+      const fullNameInput = document.getElementById('fullName')
+      const emailInput = document.getElementById('email')
+      const messageInput = document.getElementById('message')
+      const submitButton = document.getElementById('submit-button')
+      const feedback = document.getElementById('form-feedback')
+      const DEFAULT_FEEDBACK = 'Fill in the form and we will get back to you shortly.'
+
+      function isNameValid() {
+        return fullNameInput.value.trim().length >= 2
+      }
+      function isEmailValid() {
+        return emailInput.value.includes('@') && emailInput.value.includes('.')
+      }
+      function isMessageValid() {
+        return messageInput.value.trim().length >= 10
+      }
+
+      function fieldBorderClass(input, valid) {
+        input.classList.remove('border-slate-800', 'border-violet-500', 'border-red-500')
+        if (document.activeElement !== input) {
+          input.classList.add('border-slate-800')
+        } else {
+          input.classList.add(valid ? 'border-violet-500' : 'border-red-500')
+        }
+      }
+
+      function updateValidation() {
+        fieldBorderClass(fullNameInput, isNameValid())
+        fieldBorderClass(emailInput, isEmailValid())
+        fieldBorderClass(messageInput, isMessageValid())
+        submitButton.disabled = !(isNameValid() && isEmailValid() && isMessageValid())
+      }
+      ;[fullNameInput, emailInput, messageInput].forEach((input) => {
+        input.addEventListener('input', updateValidation)
+        input.addEventListener('focus', updateValidation)
+        input.addEventListener('blur', updateValidation)
+      })
+      updateValidation()
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault()
+        submitButton.disabled = true
+        feedback.textContent = 'Sending your message...'
+
+        await new Promise((resolve) => setTimeout(resolve, 1500))
+
+        fullNameInput.value = ''
+        emailInput.value = ''
+        messageInput.value = ''
+        feedback.textContent = 'Message sent! We will reply to you soon.'
+
+        setTimeout(() => {
+          feedback.textContent = DEFAULT_FEEDBACK
+          updateValidation()
+        }, 4000)
+      })
+    </script>
+  </body>
+</html>

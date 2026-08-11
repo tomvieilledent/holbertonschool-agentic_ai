@@ -1,18 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Agentic AI - Holberton School. The same landing page implemented three times: React, Vue.js and Svelte."
+      content="Agentic AI - Holberton School. La même landing page implémentée quatre fois : Vanilla, React, Vue.js et Svelte."
     />
     <title>Agentic AI - Holberton School</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   </head>
 
   <body
-    class="relative flex min-h-screen flex-col items-center justify-center gap-10 overflow-hidden bg-slate-950 px-8 py-16 text-center text-slate-50"
+    class="relative flex min-h-screen flex-col items-center justify-center gap-10 overflow-x-hidden bg-slate-950 px-8 py-16 text-center text-slate-50"
   >
     <!-- Radial violet glow -->
     <div
@@ -28,14 +33,42 @@
     <h1 class="relative text-4xl font-extrabold tracking-tight sm:text-6xl">Agentic AI</h1>
 
     <p class="relative max-w-xl text-base leading-relaxed text-slate-400">
-      The same landing page, built three times. Pick the implementation you want to explore: React,
-      Vue.js or Svelte.
+      La même landing page, réalisée quatre fois. Choisis l'implémentation que tu veux explorer :
+      Vanilla, React, Vue.js ou Svelte.
     </p>
 
-    <div class="relative grid w-full max-w-3xl grid-cols-1 gap-5 sm:grid-cols-3">
+    <div class="relative grid w-full max-w-7xl grid-cols-1 items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- Vanilla card -->
+      <div
+        class="group flex flex-col items-center gap-3 rounded-3xl border border-slate-800 bg-slate-900 p-8 text-center transition hover:-translate-y-0.5 hover:border-violet-500"
+      >
+        <!-- Vanilla logo: the actual stack used (HTML, CSS, Tailwind, JS) -->
+        <div class="grid h-12 w-12 grid-cols-2 gap-1" aria-hidden="true">
+          <div class="flex items-center justify-center rounded-[4px] bg-[#E44D26] text-[10px] font-black text-white">
+            5
+          </div>
+          <div class="flex items-center justify-center rounded-[4px] bg-[#1572B6] text-[10px] font-black text-white">
+            3
+          </div>
+          <div class="flex items-center justify-center rounded-[4px] bg-[#38BDF8] text-[9px] font-black text-white">
+            TW
+          </div>
+          <div class="flex items-center justify-center rounded-[4px] bg-[#F7DF1E] text-[9px] font-black text-black">
+            JS
+          </div>
+        </div>
+        <span class="text-xl font-bold text-slate-50">Projet Vanilla</span>
+        <span class="flex min-h-[5rem] items-center justify-center text-sm text-slate-400">
+          Même landing page Agentic AI, réalisée en HTML/CSS/JS pur : sans framework, sans
+          build.
+        </span>
+        <a href="./vanilla/" class="mt-2 text-sm font-semibold text-violet-300 hover:underline"
+          >Ouvrir la version Vanilla</a
+        >
+      </div>
+
       <!-- React card -->
-      <a
-        href="./react/"
+      <div
         class="group flex flex-col items-center gap-3 rounded-3xl border border-slate-800 bg-slate-900 p-8 text-center transition hover:-translate-y-0.5 hover:border-violet-500"
       >
         <!-- React logo -->
@@ -52,17 +85,18 @@
             <ellipse rx="11" ry="4.2" transform="rotate(120)" />
           </g>
         </svg>
-        <span class="text-xl font-bold text-slate-50">React project</span>
-        <span class="text-sm text-slate-400">
-          The same Agentic AI landing page, built with React using function components, JSX syntax
-          and the Hooks API.
+        <span class="text-xl font-bold text-slate-50">Projet React</span>
+        <span class="flex min-h-[5rem] items-center justify-center text-sm text-slate-400">
+          Même landing page Agentic AI, réalisée avec React : composants fonctions, JSX et l'API
+          Hooks.
         </span>
-        <span class="mt-auto pt-2 text-sm font-semibold text-violet-300">Open the React version</span>
-      </a>
+        <a href="./react/" class="mt-2 text-sm font-semibold text-violet-300 hover:underline"
+          >Ouvrir la version React</a
+        >
+      </div>
 
       <!-- Vue card -->
-      <a
-        href="./vue/"
+      <div
         class="group flex flex-col items-center gap-3 rounded-3xl border border-slate-800 bg-slate-900 p-8 text-center transition hover:-translate-y-0.5 hover:border-violet-500"
       >
         <!-- Vue.js logo -->
@@ -78,17 +112,18 @@
             fill="#35495e"
           />
         </svg>
-        <span class="text-xl font-bold text-slate-50">Vue project</span>
-        <span class="text-sm text-slate-400">
-          The same Agentic AI landing page, built with Vue 3 using Single File Components, template
-          syntax and the Composition API.
+        <span class="text-xl font-bold text-slate-50">Projet Vue</span>
+        <span class="flex min-h-[5rem] items-center justify-center text-sm text-slate-400">
+          Même landing page Agentic AI, réalisée avec Vue 3 : Single File Components et
+          Composition API.
         </span>
-        <span class="mt-auto pt-2 text-sm font-semibold text-violet-300">Open the Vue version</span>
-      </a>
+        <a href="./vue/" class="mt-2 text-sm font-semibold text-violet-300 hover:underline"
+          >Ouvrir la version Vue</a
+        >
+      </div>
 
       <!-- Svelte card -->
-      <a
-        href="./svelte/"
+      <div
         class="group flex flex-col items-center gap-3 rounded-3xl border border-slate-800 bg-slate-900 p-8 text-center transition hover:-translate-y-0.5 hover:border-violet-500"
       >
         <!-- Svelte logo -->
@@ -102,15 +137,227 @@
             fill="#fff"
           />
         </svg>
-        <span class="text-xl font-bold text-slate-50">Svelte project</span>
-        <span class="text-sm text-slate-400">
-          The same Agentic AI landing page, built with Svelte using compiled components, reactive
-          runes and the #each / #if template syntax.
+        <span class="text-xl font-bold text-slate-50">Projet Svelte</span>
+        <span class="flex min-h-[5rem] items-center justify-center text-sm text-slate-400">
+          Même landing page Agentic AI, réalisée avec Svelte : composants compilés et runes
+          réactives.
         </span>
-        <span class="mt-auto pt-2 text-sm font-semibold text-violet-300">Open the Svelte version</span>
-      </a>
+        <a href="./svelte/" class="mt-2 text-sm font-semibold text-violet-300 hover:underline"
+          >Ouvrir la version Svelte</a
+        >
+      </div>
     </div>
 
-    <footer class="relative text-xs text-slate-600">Built for Holberton School.</footer>
+    <!--
+      Grille de comparaison detaillee : une seule grille CSS (Vanilla / React / Vue / Svelte en
+      colonnes), avec un sous-rang par titre / texte / snippet. Comme les 4 colonnes appartiennent
+      a la meme grille, le navigateur aligne nativement chaque sous-rang sur son contenu le plus
+      haut, meme si les descriptions ou les snippets passent sur plusieurs lignes.
+    -->
+    <div
+      class="comparison-table hidden grid w-full max-w-7xl grid-cols-1 items-stretch gap-x-5 gap-y-1.5 text-left sm:grid-cols-2 lg:grid-cols-4"
+    >
+      <p class="text-xs font-semibold text-violet-300">Composants</p>
+      <p class="text-xs font-semibold text-violet-300">Composants</p>
+      <p class="text-xs font-semibold text-violet-300">Composants</p>
+      <p class="text-xs font-semibold text-violet-300">Composants</p>
+      <p class="text-xs text-slate-400">Pas de composants : une fonction JS qui génère du HTML.</p>
+      <p class="text-xs text-slate-400">Une fonction JS qui retourne du JSX.</p>
+      <p class="text-xs text-slate-400">Un fichier .vue avec <code>&lt;script setup&gt;</code> et <code>&lt;template&gt;</code>.</p>
+      <p class="text-xs text-slate-400">Un fichier .svelte : script puis markup au premier niveau.</p>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">function renderCard(title) {
+  return `&lt;div&gt;${title}&lt;/div&gt;`
+}</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">function Button() { return &lt;a&gt;Cliquer&lt;/a&gt; }</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">&lt;script setup&gt;
+  import { ref } from 'vue'
+&lt;/script&gt;</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">&lt;script&gt;
+  let { href } = $props()
+&lt;/script&gt;</code>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Templates</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Templates</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Templates</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Templates</p>
+      <p class="text-xs text-slate-400">Template strings JS avec interpolation <code>${...}</code>.</p>
+      <p class="text-xs text-slate-400">Le HTML est simulé en JSX, directement dans le JS.</p>
+      <p class="text-xs text-slate-400">Une vraie balise <code>&lt;template&gt;</code> avec des directives HTML.</p>
+      <p class="text-xs text-slate-400">Du HTML presque pur, variables entre accolades.</p>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">el.innerHTML = `&lt;a href="${href}"&gt;${label}&lt;/a&gt;`</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">&lt;a href={href}&gt;{children}&lt;/a&gt;</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">&lt;template&gt;
+  &lt;a :href="href"&gt;{{ label }}&lt;/a&gt;
+&lt;/template&gt;</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">&lt;a {href}&gt;{@render children?.()}&lt;/a&gt;</code>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Props</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Props</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Props</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Props</p>
+      <p class="text-xs text-slate-400">Pas de props : simples paramètres de fonction JS.</p>
+      <p class="text-xs text-slate-400">Ce sont les paramètres de la fonction composant.</p>
+      <p class="text-xs text-slate-400"><code>defineProps({ ... })</code> avec type et valeur par défaut.</p>
+      <p class="text-xs text-slate-400"><code>$props()</code> avec déstructuration et valeurs par défaut.</p>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">function renderCard({ title, description }) {
+  ...
+}</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">function Button({ href, variant }) {
+  ...
+}</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">const props = defineProps({
+  href: String
+})</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">let { href, variant = 'primary' } = $props()</code>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">État</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">État</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">État</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">État</p>
+      <p class="text-xs text-slate-400">Variable JS classique ; il faut mettre à jour le DOM soi-même.</p>
+      <p class="text-xs text-slate-400"><code>useState</code> renvoie une paire [valeur, setter].</p>
+      <p class="text-xs text-slate-400"><code>ref()</code> crée l'état ; on lit/écrit via <code>.value</code>.</p>
+      <p class="text-xs text-slate-400"><code>$state()</code> rend une variable réactive ; on la réassigne normalement.</p>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">let insights = []
+insights = data
+renderInsights(insights)</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">const [insights, setInsights] = useState([])</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">const insights = ref([])
+insights.value = data</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">let insights = $state([])
+insights = data</code>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Condition / liste</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Condition / liste</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Condition / liste</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Condition / liste</p>
+      <p class="text-xs text-slate-400"><code>if</code>/<code>else</code> classique, <code>.forEach()</code> pour générer le HTML.</p>
+      <p class="text-xs text-slate-400">Ternaire pour une condition, <code>.map()</code> pour une liste.</p>
+      <p class="text-xs text-slate-400"><code>v-if</code>/<code>v-else</code> en attribut, <code>v-for</code> avec <code>:key</code>.</p>
+      <p class="text-xs text-slate-400">Blocs <code>{#if}</code>/<code>{:else}</code> et <code>{#each}</code> autour du markup.</p>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">list.forEach(i =&gt;
+  grid.appendChild(renderCard(i))
+)</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">{error
+  ? &lt;p&gt;{error}&lt;/p&gt;
+  : list.map(i =&gt; &lt;Card key={i.id} /&gt;)}</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">&lt;div v-for="i in list" :key="i.id"&gt;
+  {{ i.title }}
+&lt;/div&gt;</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">{#each list as i (i.id)}
+  &lt;Card title={i.title} /&gt;
+{/each}</code>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Cycle de vie</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Cycle de vie</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Cycle de vie</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Cycle de vie</p>
+      <p class="text-xs text-slate-400"><code>DOMContentLoaded</code>, ou du code exécuté en bas de page.</p>
+      <p class="text-xs text-slate-400"><code>useEffect</code> avec un tableau de dépendances vide.</p>
+      <p class="text-xs text-slate-400"><code>onMounted(fn)</code>, un hook dédié par étape du cycle de vie.</p>
+      <p class="text-xs text-slate-400"><code>onMount(fn)</code>, une seule fonction appelée au montage.</p>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">document.addEventListener(
+  'DOMContentLoaded',
+  load
+)</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">useEffect(() =&gt; {
+  load()
+}, [])</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">onMounted(async () =&gt; {
+  insights.value = await load()
+})</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">onMount(async () =&gt; {
+  insights = await load()
+})</code>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Formulaires</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Formulaires</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Formulaires</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Formulaires</p>
+      <p class="text-xs text-slate-400"><code>value</code> + <code>addEventListener('input', ...)</code> à la main.</p>
+      <p class="text-xs text-slate-400"><code>value</code> + <code>onChange</code> gérés à la main.</p>
+      <p class="text-xs text-slate-400"><code>v-model</code> lie le champ et la donnée dans les deux sens.</p>
+      <p class="text-xs text-slate-400"><code>bind:value</code> lie le champ, <code>on&lt;event&gt;</code> gère les événements.</p>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">input.addEventListener('input', e =&gt; {
+  value = e.target.value
+})</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">&lt;input
+  value={v}
+  onChange={e =&gt; setV(e.target.value)}
+/&gt;</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">&lt;input v-model="formData.email" /&gt;</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">&lt;input bind:value={formData.email} /&gt;</code>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Structure du projet</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Structure du projet</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Structure du projet</p>
+      <p class="text-xs font-semibold text-violet-300 mt-4 border-t border-slate-800/60 pt-3">Structure du projet</p>
+      <p class="text-xs text-slate-400">Un seul fichier index.html, pas de build ni de dépendances.</p>
+      <p class="text-xs text-slate-400">Même arborescence que les autres, extension <code>.jsx</code>.</p>
+      <p class="text-xs text-slate-400">Même arborescence que les autres, extension <code>.vue</code>.</p>
+      <p class="text-xs text-slate-400">Même arborescence que les autres, extension <code>.svelte</code>.</p>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">vanilla/index.html</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">src/components/ui/Button.jsx</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">src/components/ui/Button.vue</code>
+      <code class="snippet-code language-javascript block whitespace-pre-wrap break-words rounded bg-black px-2 py-1 font-mono text-[11px] leading-relaxed">src/components/ui/Button.svelte</code>
+    </div>
+
+    <div
+      class="comparison-table hidden relative w-full max-w-7xl overflow-x-auto rounded-3xl border border-slate-800 bg-slate-900 p-8 text-left"
+    >
+      <h2 class="text-center text-xl font-bold text-slate-50">Lequel choisir ?</h2>
+
+      <table class="mt-6 w-full min-w-[640px] table-fixed border-collapse text-left text-sm">
+        <thead>
+          <tr class="border-b border-slate-800 text-slate-300">
+            <th class="w-1/5 py-2 pr-3 font-semibold">Framework</th>
+            <th class="w-2/5 py-2 pr-3 font-semibold text-emerald-400">Avantages</th>
+            <th class="w-2/5 py-2 font-semibold text-red-400">Inconvénients</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800">
+          <tr class="align-top">
+            <td class="py-3 pr-3 font-semibold text-slate-50">Vanilla</td>
+            <td class="py-3 pr-3 text-slate-400">Zéro dépendance, zéro étape de build, le plus simple à héberger et à comprendre de bout en bout.</td>
+            <td class="py-3 text-slate-400">Tout est manuel (état, DOM, formulaires) : devient vite difficile à maintenir sur une grosse application.</td>
+          </tr>
+          <tr class="align-top">
+            <td class="py-3 pr-3 font-semibold text-slate-50">React</td>
+            <td class="py-3 pr-3 text-slate-400">Écosystème le plus large, le plus d'offres d'emploi, immense communauté et bibliothèques tierces.</td>
+            <td class="py-3 text-slate-400">Plus de code répétitif pour l'état (<code>useState</code>/<code>useEffect</code>), le diff du Virtual DOM a un coût à l'exécution.</td>
+          </tr>
+          <tr class="align-top">
+            <td class="py-3 pr-3 font-semibold text-slate-50">Vue</td>
+            <td class="py-3 pr-3 text-slate-400">Courbe d'apprentissage douce, <code>v-model</code> natif, documentation claire, template proche du HTML classique.</td>
+            <td class="py-3 text-slate-400">Marché de l'emploi plus restreint que React, garde un Virtual DOM en interne.</td>
+          </tr>
+          <tr class="align-top">
+            <td class="py-3 pr-3 font-semibold text-slate-50">Svelte</td>
+            <td class="py-3 pr-3 text-slate-400">Le moins de code à écrire, pas de Virtual DOM (bundle plus léger, exécution plus rapide), réactivité proche du JS pur.</td>
+            <td class="py-3 text-slate-400">Écosystème et marché de l'emploi les plus restreints, les runes de Svelte 5 sont récentes donc moins d'exemples/ressources.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <button
+      id="compare-toggle"
+      type="button"
+      class="relative rounded-full border border-violet-500/40 bg-violet-500/10 px-5 py-2 text-sm font-semibold text-violet-300 transition hover:border-violet-500 hover:bg-violet-500/20"
+    >
+      Afficher la comparaison
+    </button>
+
+    <footer class="relative text-xs text-slate-600">Réalisé pour Holberton School.</footer>
+
+    <script>
+      const compareToggle = document.getElementById('compare-toggle')
+      const comparisonTables = document.querySelectorAll('.comparison-table')
+      let highlighted = false
+
+      compareToggle.addEventListener('click', () => {
+        const isHidden = comparisonTables[0].classList.contains('hidden')
+        comparisonTables.forEach((table) => table.classList.toggle('hidden', !isHidden))
+        compareToggle.textContent = isHidden ? 'Masquer la comparaison' : 'Afficher la comparaison'
+
+        if (isHidden && !highlighted) {
+          document.querySelectorAll('code.snippet-code').forEach((el) => hljs.highlightElement(el))
+          highlighted = true
+        }
+      })
+    </script>
   </body>
 </html>
