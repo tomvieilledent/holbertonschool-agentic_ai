@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Agentic AI - Holberton School. The same landing page implemented twice: once in React and once in Vue.js."
+      content="Agentic AI - Holberton School. The same landing page implemented three times: React, Vue.js and Svelte."
     />
     <title>Agentic AI - Holberton School</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,11 +28,11 @@
     <h1 class="relative text-4xl font-extrabold tracking-tight sm:text-6xl">Agentic AI</h1>
 
     <p class="relative max-w-xl text-base leading-relaxed text-slate-400">
-      The same landing page, built twice. Pick the implementation you want to explore: one in
-      React, one in Vue.js.
+      The same landing page, built three times. Pick the implementation you want to explore: React,
+      Vue.js or Svelte.
     </p>
 
-    <div class="relative grid w-full max-w-2xl grid-cols-1 gap-5 sm:grid-cols-2">
+    <div class="relative grid w-full max-w-3xl grid-cols-1 gap-5 sm:grid-cols-3">
       <!-- React card -->
       <a
         href="./react/"
@@ -84,6 +84,30 @@
           syntax and the Composition API.
         </span>
         <span class="mt-auto pt-2 text-sm font-semibold text-violet-300">Open the Vue version</span>
+      </a>
+
+      <!-- Svelte card -->
+      <a
+        href="./svelte/"
+        class="group flex flex-col items-center gap-3 rounded-3xl border border-slate-800 bg-slate-900 p-8 text-center transition hover:-translate-y-0.5 hover:border-violet-500"
+      >
+        <!-- Svelte logo -->
+        <svg class="h-12 w-12" viewBox="0 0 98.1 118" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path
+            d="M91 15.8A34 34 0 0 0 42.3 4.6L25 15.5a25 25 0 0 0-11 16.7 25.6 25.6 0 0 0 2.5 16 25 25 0 0 0-3.5 9.6 26.3 26.3 0 0 0 4.4 19.6 34 34 0 0 0 48.6 11.2L83 78a25 25 0 0 0 11-16.6 25.5 25.5 0 0 0-2.5-16 25 25 0 0 0 3.5-9.7 26.3 26.3 0 0 0-4.4-19.6"
+            fill="#ff3e00"
+          />
+          <path
+            d="M40.9 103.1a20.7 20.7 0 0 1-22.3-8.3 19.3 19.3 0 0 1-3.2-14.5 18 18 0 0 1 .6-2.3l.5-1.4 1.2.9a32.6 32.6 0 0 0 9.9 5l.9.2-.1.9a5.9 5.9 0 0 0 1 4.5 6.3 6.3 0 0 0 6.8 2.5 6 6 0 0 0 1.7-.7l17.3-11a5.5 5.5 0 0 0 2.5-3.7 5.8 5.8 0 0 0-1-4.4 6.3 6.3 0 0 0-6.8-2.5 6 6 0 0 0-1.7.7l-6.6 4.2a19.6 19.6 0 0 1-5.5 2.3 20.7 20.7 0 0 1-22.3-8.3 19.3 19.3 0 0 1-3.2-14.5 17.8 17.8 0 0 1 8.1-12.3l17.3-11a19.6 19.6 0 0 1 5.5-2.3 20.7 20.7 0 0 1 22.3 8.3 19.3 19.3 0 0 1 3.2 14.5 18 18 0 0 1-.6 2.3l-.5 1.4-1.2-.9a32.6 32.6 0 0 0-9.9-5l-.9-.2.1-.9a5.9 5.9 0 0 0-1-4.5 6.3 6.3 0 0 0-6.8-2.5 6 6 0 0 0-1.7.7l-17.3 11a5.5 5.5 0 0 0-2.5 3.7 5.8 5.8 0 0 0 1 4.4 6.3 6.3 0 0 0 6.8 2.5 6 6 0 0 0 1.7-.7l6.6-4.2a19.6 19.6 0 0 1 5.5-2.3 20.7 20.7 0 0 1 22.3 8.3 19.3 19.3 0 0 1 3.2 14.5 17.8 17.8 0 0 1-8.1 12.3l-17.3 11a19.6 19.6 0 0 1-5.5 2.3z"
+            fill="#fff"
+          />
+        </svg>
+        <span class="text-xl font-bold text-slate-50">Svelte project</span>
+        <span class="text-sm text-slate-400">
+          The same Agentic AI landing page, built with Svelte using compiled components, reactive
+          runes and the #each / #if template syntax.
+        </span>
+        <span class="mt-auto pt-2 text-sm font-semibold text-violet-300">Open the Svelte version</span>
       </a>
     </div>
 

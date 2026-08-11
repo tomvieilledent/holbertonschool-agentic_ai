@@ -1,0 +1,72 @@
+<script>
+  import SectionBadge from '../ui/SectionBadge.svelte'
+  import SectionTitle from '../ui/SectionTitle.svelte'
+  import Button from '../ui/Button.svelte'
+  import StatCard from '../cards/StatCard.svelte'
+
+  const stats = [
+    { value: '10K+', label: 'Active agents' },
+    { value: '99.9%', label: 'Uptime' },
+    { value: '50M+', label: 'Tasks automated' },
+    { value: '24/7', label: 'Support' },
+  ]
+</script>
+
+<section id="hero-section" class="relative overflow-hidden bg-black pt-36 pb-24">
+  <!-- Background effects -->
+  <div class="pointer-events-none absolute inset-0">
+    <!-- Radial violet glow -->
+    <div
+      class="absolute top-0 left-1/2 h-160 w-160 -translate-x-1/2 rounded-full bg-violet-500/20 blur-3xl"
+    ></div>
+    <!-- Radial blue glow -->
+    <div class="absolute top-40 right-1/4 h-120 w-120 rounded-full bg-blue-500/10 blur-3xl"></div>
+    <!-- Grid overlay -->
+    <div
+      class="bg-size[72px_72px] absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.12)_1px,transparent_1px)] opacity-30"
+    ></div>
+    <!-- Depth vignette -->
+    <div class="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-slate-950"></div>
+  </div>
+
+  <div class="relative mx-auto flex w-full max-w-6xl flex-col items-center gap-8 px-6 text-center">
+    <!-- Badge -->
+    <SectionBadge class="text-xs">The future of coding</SectionBadge>
+
+    <!-- Title -->
+    <div>
+      <SectionTitle
+        as="h1"
+        class="text-5xl md:text-7xl"
+        top="Build smarter workflows"
+        bottom="with Agentic AI"
+      />
+    </div>
+
+    <!-- Subtitle -->
+    <div>
+      <p class="max-w-2xl text-sm text-slate-300 md:text-base">
+        Create autonomous AI agents that think, plan, and execute complex tasks. Transform your
+        business with intelligent automation.
+      </p>
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex flex-col items-center gap-4 sm:flex-row">
+      <Button href="#contact-section" class="text-sm whitespace-nowrap md:text-base">
+        Start learning with Holberton School
+      </Button>
+
+      <Button href="#features-section" variant="secondary" class="text-sm whitespace-nowrap md:text-base">
+        Methodology
+      </Button>
+    </div>
+
+    <!-- Stats -->
+    <div class="mt-12 grid w-full grid-cols-2 gap-8 md:grid-cols-4">
+      {#each stats as stat (stat.label)}
+        <StatCard value={stat.value} label={stat.label} />
+      {/each}
+    </div>
+  </div>
+</section>
