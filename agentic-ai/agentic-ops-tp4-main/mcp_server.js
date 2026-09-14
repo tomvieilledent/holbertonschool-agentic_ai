@@ -28,8 +28,19 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
           },
           required: ["email"]
         }
+      },
+      {
+        name: "update_customer_status",
+        description: "Met à jour le statut d'un client identifié par son email.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            email: { type: "string", description: "L'email du client (ex: dev@entreprise.com)" },
+            new_status: { type: "string", description: "Le nouveau statut à appliquer (ex: Inactif)" }
+          },
+          required: ["email", "new_status"]
+        }
       }
-      // TODO (Tâche 3) : Ajouter la définition de 'update_customer_status' ici
     ]
   };
 });
@@ -52,7 +63,23 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     };
   }
 
-  // TODO (Tâche 3) : Ajouter la logique d'exécution pour 'update_customer_status' ici
+  if (request.params.name === "update_customer_status") {
+    const { email, new_status } = request.params.arguments;
+    const data = DATABASE[email];
+
+    if (!data) {
+      return {
+        content: [{ type: "text", text: `Erreur: Aucun client trouvé pour l'email ${email}` }],
+        isError: true,
+      };
+    }
+
+    data.status = new_status;
+
+    return {
+      content: [{ type: "text", text: `Succès: le statut de ${email} est maintenant "${new_status}".` }]
+    };
+  }
 
   throw new Error("Outil inconnu");
 });
