@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "sentinel-server": {
+      "command": "wsl.exe",
+      "args": [
+        "bash",
+        "-ic",
+        "node /votre/chemin/mcp_server.js"
+      ]
+    }
+  }
+}
