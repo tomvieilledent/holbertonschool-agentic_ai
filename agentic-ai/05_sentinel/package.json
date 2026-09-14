@@ -1,0 +1,13 @@
+{
+  "name": "sentinel-github-ops",
+  "version": "1.0.0",
+  "description": "Serveur MCP GitHub Ops - Projet 5 Sentinel",
+  "main": "mcp_server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node mcp_server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest"
+  }
+}

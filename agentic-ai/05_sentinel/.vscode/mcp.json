@@ -1,0 +1,14 @@
+{
+  "servers": {
+    "sentinel-server": {
+      "command": "/usr/bin/env",
+      "args": [
+        "node",
+        "/Users/fitax/Documents/Holberton/holbertonschool-agentic_ai/agentic-ai/05_sentinel/mcp_server.js"
+      ],
+      "env": {
+        "GITHUB_TOKEN": "${env:GITHUB_TOKEN}"
+      }
+    }
+  }
+}
