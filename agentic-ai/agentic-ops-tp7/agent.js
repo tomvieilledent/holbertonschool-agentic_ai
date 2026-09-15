@@ -5,7 +5,8 @@ import { Langfuse, observeOpenAI } from "langfuse";
 dotenv.config();
 
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY
+    apiKey: process.env.GEMINI_API_KEY,
+    baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/"
 });
 
 const langfuse = new Langfuse();
@@ -27,7 +28,7 @@ async function main() {
     });
 
     const response = await observedOpenai.chat.completions.create({
-        model: "gpt-4o-mini",
+        model: "gemini-3.6-flash",
         messages: [{ role: "user", content: promptCritique }]
     });
 
