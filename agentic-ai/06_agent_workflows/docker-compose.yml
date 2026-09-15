@@ -1,7 +1,15 @@
 services:
   task-watcher:
-    build: .
+    build:
+      context: .
+    image: agentic-ops-06-task-watcher:latest
     container_name: task-watcher
-    restart: unless-stopped
     volumes:
       - ./tasks.json:/app/tasks.json:ro
+    restart: unless-stopped
+    user: "node"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

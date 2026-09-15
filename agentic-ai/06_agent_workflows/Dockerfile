@@ -1,9 +1,12 @@
-FROM node:18-alpine3.20
+FROM node:20.17.0-alpine3.20
 
 WORKDIR /app
 
-COPY package.json ./
-COPY index.js ./
-COPY tasks.json ./
+COPY --chown=node:node package.json ./
+COPY --chown=node:node index.js ./
 
-CMD ["npm", "start"]
+ENV NODE_ENV=production
+
+USER node
+
+CMD ["node", "index.js"]
