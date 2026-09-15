@@ -1,0 +1,7 @@
+services:
+  task-watcher:
+    build: .
+    container_name: task-watcher
+    restart: unless-stopped
+    volumes:
+      - ./tasks.json:/app/tasks.json:ro

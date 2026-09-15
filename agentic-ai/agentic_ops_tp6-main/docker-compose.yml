@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  agentic-watcher:
+    build: .
+    image: agentic-ops-tp6:latest
+    container_name: agentic-watcher
+    # Bind-mount local tasks.json so runtime changes are visible to the container
+    volumes:
+      - ./tasks.json:/app/tasks.json:ro
+    restart: unless-stopped
+    # Ensure the container runs as the non-root user inside the image
+    user: "node"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
