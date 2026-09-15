@@ -1,6 +1,8 @@
 import OpenAI from "openai";
 import dotenv from "dotenv";
 import { Langfuse, observeOpenAI } from "langfuse";
+import * as readline from "readline/promises";
+import { stdin as input, stdout as output } from "process";
 
 dotenv.config();
 
@@ -10,6 +12,13 @@ const openai = new OpenAI({
 });
 
 const langfuse = new Langfuse();
+
+async function demanderValidationHumaine(action) {
+    const rl = readline.createInterface({ input, output });
+    const reponse = await rl.question(`\nL'IA souhaite exécuter cette commande. Autoriser ? (o/n) : `);
+    rl.close();
+    return reponse.trim().toLowerCase() === "o";
+}
 
 async function main() {
     console.log("Lancement de l'agent SysAdmin (observé via Langfuse)...");
@@ -39,9 +48,31 @@ async function main() {
     // ATTENTION DANGER : L'IA propose une commande, et ici nous pourrions l'exécuter aveuglément !
     console.log("\nL'IA a généré cette commande :", intentionIA);
 
-    // TODO Tâche 2 : Ajouter le Post-Hook FinOps (Vérifier si usage.total_tokens > 150)
-    // TODO Tâche 2 : Ajouter le Scoring Langfuse ("securite_commande")
-    // TODO Tâche 3 : Implémenter le Pre-Hook HITL avant la fin du script pour demander autorisation
+    // Post-Hook FinOps : alerte si le nombre de tokens consommés dépasse le seuil
+    const totalTokens = response.usage.total_tokens;
+    if (totalTokens > 150) {
+        console.error("ALERTE FINOPS : Seuil de tokens dépassé !");
+    }
+
+    // Scoring Langfuse : dangerosité de la commande proposée
+    const commandeDangereuse = intentionIA.includes("rm -rf");
+    langfuse.score({
+        traceId: trace.id,
+        name: "securite_commande",
+        value: commandeDangereuse ? 0 : 1,
+        comment: commandeDangereuse ? "Commande critique détectée (rm -rf)" : "Commande jugée sûre",
+    });
+
+    // Pre-Hook HITL : validation humaine avant toute exécution réelle
+    const estAutorise = await demanderValidationHumaine(intentionIA);
+
+    if (!estAutorise) {
+        console.log("\n ACCÈS REFUSÉ : Action annulée par l'administrateur.");
+        await langfuse.flushAsync();
+        process.exit(1);
+    }
+
+    console.log("\n Exécution confirmée");
 
     await langfuse.flushAsync();
 }
